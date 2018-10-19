@@ -39,3 +39,7 @@
     transform: translateY(100%)
   }
 
+.iconlist{
+  display: flex;
+  justify-content: center;
+}

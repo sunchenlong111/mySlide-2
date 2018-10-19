@@ -7,19 +7,42 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/icon.js"></script>
+  <style type="text/css">
+    .icon {
+      width: 2em;
+      height: 2em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
+  <script src="//at.alicdn.com/t/font_881670_9g344t3xf8k.js"></script>
 </head>
 
 <body>
-  <div class="window">
-    <div class="images" id=images>
-      <img src="./images/1.jpg" width=300 alt="图片1" height=200>
-      <img src="./images/2.jpg" width=300 alt="图片二" height=200>
-      <img src="./images/3.jpg" alt="图片三" width=300 height=200>
-      <img src="./images/4.jpg" alt="图片四" width=300 height=200>
+  <div class='container'>
+    <div class="window">
+
+      <div class="images" id=images>
+        <img src="./images/1.jpg" width=300 alt="图片1" height=200>
+        <img src="./images/2.jpg" width=300 alt="图片二" height=200>
+        <img src="./images/3.jpg" alt="图片三" width=300 height=200>
+        <img src="./images/4.jpg" alt="图片四" width=300 height=200>
+      </div>
     </div>
+
+    <div class='iconlist'>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-jiantouxia"></use>
+      </svg>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-jiantoushang"></use>
+      </svg>
+    </div>
+
   </div>
 </body>
 <script src="./js/jQuery-min.js"></script>
 <script src="./js/main.js"></script>
+
 </html>
