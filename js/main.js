@@ -1,13 +1,28 @@
 let n = 1;
 init(n)
-setInterval(() => {
+var timer = setInterval(() => {
   makeLeave(getImage(n))
     .one('transitionend', (e) => {
       makeEnter($(e.currentTarget))
     }) //为什么使用one，one只监听一次，监听完毕后就销毁，不然的话只要一运动结束，就会加一个enter状态
   makeCurrent(getImage(n + 1))
   n = n + 1
-}, 3000);
+}, 2000);
+
+document.addEventListener('visibilitychange', function (e) {
+  if (document.hidden) {
+    window.clearInterval(timer)
+  } else {
+    timer = setInterval(() => {
+      makeLeave(getImage(n))
+        .one('transitionend', (e) => {
+          makeEnter($(e.currentTarget))
+        }) //为什么使用one，one只监听一次，监听完毕后就销毁，不然的话只要一运动结束，就会加一个enter状态
+      makeCurrent(getImage(n + 1))
+      n = n + 1
+    }, 2000);
+  }
+})
 
 
 
@@ -42,4 +57,4 @@ function judgeN(n) {
     }
   }
   return n
-} 
+}

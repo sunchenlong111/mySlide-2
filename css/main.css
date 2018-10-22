@@ -18,7 +18,7 @@
 
   .images>img {
     width: 100%;
-    transition: all 1.5s;
+    transition: all 1s;
     position: absolute;
     top: 0;
   }
@@ -26,20 +26,16 @@
 
   .images>img.current {
     left: 0;
-    transform: translateY(0);
+    transform: translateX(0);
     z-index: 1;
   }
 
   .images>img.leave {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
 
   }
 
   .images>img.enter {
-    transform: translateY(100%)
+    transform: translateX(100%)
   }
 
-.iconlist{
-  display: flex;
-  justify-content: center;
-}
